@@ -1,0 +1,18 @@
+{
+    "name": "linked-list-module",
+    "version": "1.0.0",
+    "description": "Singley linked list package",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "(cd test && node testCases)"
+    },
+    "repository": {
+        "type": "git",
+        "url": "no"
+    },
+    "author": "Kratika Chowdhary",
+    "license": "ISC"
+}
