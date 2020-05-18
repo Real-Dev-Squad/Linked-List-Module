@@ -9,20 +9,32 @@ class LinkedList {
     constructor() {
         this.head = null;
         this.size = 0;
+        this.reverseHead = null;
     }
 
     get length() {
         return this.size;
     }
 
-    get print() {
-        let temp = this.head;
+    print(start) {
+        let temp = start;
         let myList = [];
         while (temp != null) {
             myList.push(temp.value);
             temp = temp.next;
         }
         return myList;
+    }
+
+    createList(arr) {
+        let head = new Node(arr[0]);
+        let tail = head;
+        for (let i = 1; i < arr.length; ++i) {
+            let temp = new Node(arr[i]);
+            tail.next = temp;
+            tail = temp;
+        }
+        return head;
     }
 
     add(value, index = null) {
@@ -103,6 +115,17 @@ class LinkedList {
 
         }
         this.size--;
+    }
+
+    reverse() {
+        // head is null 
+        if (!this.head) {
+            throw error('empty list');
+        }
+        // get the print of linked list and create a new linked list
+        let arr = this.print(this.head).reverse();
+        this.reverseHead = this.createList(arr);
+
     }
 
 
