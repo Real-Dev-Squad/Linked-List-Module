@@ -9,15 +9,14 @@ class LinkedList {
     constructor() {
         this.head = null;
         this.size = 0;
-        this.reverseHead = null;
     }
 
     get length() {
         return this.size;
     }
 
-    print(start) {
-        let temp = start;
+    get print() {
+        let temp = this.head;
         let myList = [];
         while (temp != null) {
             myList.push(temp.value);
@@ -117,15 +116,22 @@ class LinkedList {
         this.size--;
     }
 
-    reverse() {
-        // head is null 
-        if (!this.head) {
-            throw error('empty list');
-        }
-        // get the print of linked list and create a new linked list
-        let arr = this.print(this.head).reverse();
-        this.reverseHead = this.createList(arr);
 
+    reverse() {
+        if (!this.head) {
+            throw new Error('empty list cannot be reversed');
+        }
+
+        let next = this.head;
+        let curr = this.head;
+        let prev = null;
+        while (curr !== null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        this.head = prev;
     }
 
 

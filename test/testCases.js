@@ -27,7 +27,7 @@ listTwo.add('Ms.', 0);
 
 console.log(listTwo.get(2));
 console.log(listTwo.get(10));
-console.log(listTwo.print(listTwo.head));
+console.log(listTwo.print);
 
 // {"a" : 1}->{"b" : 2}->{"c" : 3}->{"d" : 4}->{"e" : 5}->{"f" : 6}->null
 const listThree = new List();
@@ -38,9 +38,9 @@ listThree.add({ 'd': 4 });
 listThree.add({ 'e': 5 });
 listThree.add({ 'f': 6 });
 
-console.log(listThree.print(listThree.head));
+console.log(listThree.print);
 listThree.reverse();
-console.log(listThree.print(listThree.reverseHead));
+console.log(listThree.print);
 
 
 listThree.delete(0);

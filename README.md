@@ -13,4 +13,4 @@ Single 0 index based Linked list with following API's :
 
 5.  Print = list.print --returns the array containig value of list 
 
-6. Reverse = list.reverse() --reverse the linked list and the reverse head is pointed by reverseHead property
+6. Reverse = list.reverse() --reverse the linked list 
