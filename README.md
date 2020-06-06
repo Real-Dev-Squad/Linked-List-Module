@@ -58,7 +58,7 @@ The reverse function reverse the linked list. It accepts no parameter.
 Usage
 list.reverse()
 
-Single 0 index based Linked list with following API's :
+
 
        
 
