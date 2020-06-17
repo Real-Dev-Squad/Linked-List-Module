@@ -7,7 +7,7 @@ Linked List Module
 - [Usage](#usage)
 - [Contributing](../CONTRIBUTING.md)
 
-## About <a name = "about"></a>
+## About
 
 A linked list is a linear data structure where each element, called a _node_, is a separate object.
 
@@ -39,7 +39,6 @@ Require the module in the file where you want to use either using require or imp
 ```js
 const list = require('Linked-List-Module');
 ```
-
 ```js
 import list from 'Linked-List-Module';
 ```
