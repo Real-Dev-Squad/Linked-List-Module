@@ -45,8 +45,6 @@ import list from 'Linked-List-Module';
 
 ## Usage
 
-Quick Start
-
 Linked List Module helps you to include linked list in your JavaScript code. It is a single 0-indexed based list.
 
 API Reference 
@@ -64,7 +62,7 @@ API Reference
 
 The `add(node [, index])` function adds the node to the linked List. There are two variations of adding a node in your linked list which this api provides that is adding the node at the end of the list or adding the node at any given position in your list. Keeping in mind the position specified should be a valid index.
 
-##### Parameters 
+#### Parameters 
 
 add accepts two parameters, second one is optional.
 1. `Data` to add - This is the data that you want to store as node and this api provide support for javascript data-type namely object, string, number, functions.
@@ -83,7 +81,7 @@ add accepts two parameters, second one is optional.
 
 The `get(index)` function returns the node present at that index. If the index is not present it will return NULL.  
 
-### Parameters 
+#### Parameters 
 
 get accepts one parameter
 
