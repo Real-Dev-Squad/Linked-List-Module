@@ -65,13 +65,13 @@ API Reference
 
 The `add(node [, index])` function adds the node to the linked List. There are two variations of adding a node in your linked list which this api provides that is adding the node at the end of the list or adding the node at any given position in your list. Keeping in mind the position specified should be a valid index.
 
-### Parameters 
+##### Parameters 
 
 add accepts two parameters, second one is optional.
 1. Data or value to add - This is the data that you want to store as node and this api provide support for javascript data-type namely object, string, number, functions.
 2. Index - This specifies the index where you want to store the node in your linked List.If you do not provide this parameter then the node will always be inserted at the end of list. The index here should be a positive integer. Remember this is a 0 based linked list. 
 
- ### Usage
+ ##### Usage
 
 `list.add({ 'a': 1 })`  -- add to the end of list 
 `list.add({ 'a': 1 }, 2)` -- add the node from begining of list
@@ -96,7 +96,7 @@ get accepts one parameter
 
 The length property present for Linked List returns the current number of nodes of list.
 
-Usage
+##### Usage
 
 list.length 
 
