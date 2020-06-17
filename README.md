@@ -31,17 +31,17 @@ JavaScript enviornment
 
 Install the Linked list module package from npm registry
 
-```
+```bash
 npm i <repo>/Linked-List-Module
 ```
 
 Require the module in the file where you want to use either using require or import syntax
-```
+```js
 const list = require('Linked-List-Module');
 ```
 
-```
-import list from 'Linked-List-Module'
+```js
+import list from 'Linked-List-Module';
 ```
 
 ## Usage <a name = "usage"></a>
@@ -68,13 +68,15 @@ The `add(node [, index])` function adds the node to the linked List. There are t
 ##### Parameters 
 
 add accepts two parameters, second one is optional.
-1. Data or value to add - This is the data that you want to store as node and this api provide support for javascript data-type namely object, string, number, functions.
-2. Index - This specifies the index where you want to store the node in your linked List.If you do not provide this parameter then the node will always be inserted at the end of list. The index here should be a positive integer. Remember this is a 0 based linked list. 
+1. `Data` to add - This is the data that you want to store as node and this api provide support for javascript data-type namely object, string, number, functions.
+2. `Index` - This specifies the index where you want to store the node in your linked List.If you do not provide this parameter then the node will always be inserted at the end of list. The index here should be a positive integer. Remember this is a 0 based linked list. 
 
  ##### Usage
 
-`list.add({ 'a': 1 })`  -- add to the end of list 
+`list.add({ 'a': 1 })`  -- add to the end of list
+
 `list.add({ 'a': 1 }, 2)` -- add the node from begining of list
+
 `list.add({ 'a': 1 }, 0)`  -- add to the beigining of the linked list i.e updates the head 
 
 
@@ -113,9 +115,3 @@ The reverse function reverse the linked list. It accepts no parameter.
 
 ##### Usage
 `list.reverse()`
-
-
-
-       
-
-
