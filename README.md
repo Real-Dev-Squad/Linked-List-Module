@@ -3,7 +3,7 @@ Linked List Module
 ## Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
+- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](../CONTRIBUTING.md)
 
@@ -18,7 +18,7 @@ Linked list elements are not stored at contiguous location; the elements are lin
 - The entry point into a linked list is called the head of the list.
 - It should be noted that head is not a separate node, but the reference to the first node. If the list is empty then the head is a null reference.
 
-## Getting Started <a name = "getting_started"></a>
+## Getting Started
 
 _To be filled_
 
@@ -43,7 +43,7 @@ const list = require('Linked-List-Module');
 import list from 'Linked-List-Module';
 ```
 
-## Usage <a name = "usage"></a>
+## Usage
 
 Quick Start
 
