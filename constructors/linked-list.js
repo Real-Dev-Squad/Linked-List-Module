@@ -1,11 +1,10 @@
 "use strict";
 const Node = require("./node");
 
-function LL(data) {
-  let head = new Node(data);
-  this._head = head;
-  this._tail = head;
-  this.length = 1;
+function LL() {
+  this._head = null;
+  this._tail = null;
+  this.length = 0;
 }
 
 LL.prototype.add = function add(data, index) {
@@ -27,13 +26,12 @@ LL.prototype.add = function add(data, index) {
 
       if (i === 0) {
         let node = new Node(data);
-        let nextNode = currentNode.next;
+        node.next = currentNode.next;
         currentNode.next = node;
-        node.next = nextNode;
         this.length++;
 
         // Changing tail node
-        if (!nextNode) {
+        if (!node.next) {
           this._tail = node;
         }
 

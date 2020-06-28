@@ -1,10 +1,14 @@
 const LL = require("./constructors/linked-list");
 
-let newLL = new LL(0);
-console.log(newLL.print());
-newLL.add(1, 0);
-console.log(newLL.print());
-newLL.add(2, 1);
-console.log(newLL.print());
+let newLL = new LL();
+// newLL.print();
+newLL.add(0, 0);
+// newLL.print();
+newLL.add(1, 1);
+// newLL.print();
+newLL.add(2, 2);
+
 newLL.add(3, 3);
-console.log(newLL.print());
+newLL.print();
+
+console.log(newLL);
