@@ -10,20 +10,22 @@ function LL(data) {
 
 LL.prototype.add = function add(data, index) {
   if (typeof index === "number") {
-    // Changing Head Node for index 0
     if (index === 0) {
+      // Changing the head node
       let node = new Node(data);
       node.next = this._head;
       this._head = node;
       this.length++;
 
-      return this._head;
+      return this;
     }
 
-    let i = 0;
+    let i = index;
     let currentNode = this._head;
-    while (i <= index && currentNode) {
-      if (i === index - 1) {
+    while (currentNode) {
+      i--;
+
+      if (i === 0) {
         let node = new Node(data);
         let nextNode = currentNode.next;
         currentNode.next = node;
@@ -35,14 +37,13 @@ LL.prototype.add = function add(data, index) {
           this._tail = node;
         }
 
-        return this._head;
+        return this;
       }
 
       currentNode = currentNode.next;
-      i++;
     }
 
-    return this._head;
+    return this;
   } else {
     let node = new Node(data);
 
@@ -50,7 +51,7 @@ LL.prototype.add = function add(data, index) {
     this._tail = node;
     this.length++;
 
-    return this._head;
+    return this;
   }
 };
 
@@ -92,7 +93,7 @@ LL.prototype.reverse = function (index) {
   this._head = this._tail;
   this._tail = newTail;
 
-  return this._head;
+  return this;
 };
 
 LL.prototype.print = function () {
