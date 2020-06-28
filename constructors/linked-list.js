@@ -1,9 +1,5 @@
 "use strict";
-
-function Node(data = null, next = null) {
-  this.data = data;
-  this.next = next;
-}
+const Node = require("./node");
 
 function LL(data) {
   let head = new Node(data);
@@ -107,10 +103,4 @@ LL.prototype.print = function () {
   }
 };
 
-let newLL = new LL({ 0: 1 });
-newLL.add({ 2: 3 });
-newLL.add({ 4: 5 });
-newLL.add({ 6: 7 });
-console.log(newLL.print());
-console.log(newLL.reverse());
-console.log(newLL.print());
+module.exports = LL;

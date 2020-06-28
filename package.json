@@ -1,0 +1,24 @@
+{
+  "name": "linked-list-module",
+  "version": "1.0.0",
+  "description": "Implimentation for a linked list",
+  "main": "index.js",
+  "directories": {
+    "test": "tests",
+    "constructors": "constructors"
+  },
+  "scripts": {
+    "test": "node ./tests/tests.js",
+    "index": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invalidtoken/Linked-List-Module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invalidtoken/Linked-List-Module/issues"
+  },
+  "homepage": "https://github.com/invalidtoken/Linked-List-Module#readme"
+}
