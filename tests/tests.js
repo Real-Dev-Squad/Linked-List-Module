@@ -5,7 +5,6 @@ const test = require("../helper-functions/test");
 test("Test for adding data is a linked list sequentially", function addingDataInLLSequentially() {
   let newLL = new LL();
 
-  // [[index, value]]
   let arr = [80, 20, 33, 400, 90];
 
   // Adding data in LL
@@ -43,7 +42,6 @@ test("Test of randomly adding data in a linked list", function addingDataAnyWher
 test("Test of reversing the LinkedList", function reversingLL() {
   let newLL = new LL();
 
-  // [[index, value]]
   let arr = [1, 20, 80, 50, 60, 800];
 
   // Adding data in LL
