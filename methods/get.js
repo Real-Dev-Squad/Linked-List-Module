@@ -1,3 +1,6 @@
+/**
+ * @param {number} index
+ */
 function get(index) {
   if (typeof index === "number") {
     let i = 0;

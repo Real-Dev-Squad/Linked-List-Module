@@ -1,5 +1,9 @@
 const Node = require("../constructors/node");
 
+/**
+ * @param {any} data
+ * @param {number} index
+ */
 function add(data, index) {
   if (typeof index === "number") {
     if (index === 0) {
