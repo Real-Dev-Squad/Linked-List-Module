@@ -6,27 +6,18 @@ test("Test for adding data is a linked list sequentially", function addingDataIn
   let newLL = new LL();
 
   // [[index, value]]
-  let arr = [
-    [0, 1],
-    [1, 9],
-    [2, 9],
-    [3, 20],
-  ];
+  let arr = [80, 20, 33, 400, 90];
 
   // Adding data in LL
-  for (let el of arr) {
-    let index = el[0];
-    let data = el[1];
-    newLL.add(data, index);
+  for (let [index, el] of arr.entries()) {
+    newLL.add(el, index);
   }
 
   // Checking if the enter data is valid
-  for (let el of arr) {
-    let index = el[0];
-    let data = el[1];
+  for (let [index, el] of arr.entries()) {
     let storedData = newLL.get(index);
 
-    if (data !== storedData.data) {
+    if (el !== storedData.data) {
       return;
     }
   }
@@ -44,6 +35,33 @@ test("Test of randomly adding data in a linked list", function addingDataAnyWher
     return;
   } else if (dummyLL.add(100).get(dummyLL.length - 1).data !== 100) {
     return;
+  }
+
+  return true;
+});
+
+test("Test of reversing the LinkedList", function reversingLL() {
+  let newLL = new LL();
+
+  // [[index, value]]
+  let arr = [1, 20, 80, 50, 60, 800];
+
+  // Adding data in LL
+  for (let [index, el] of arr.entries()) {
+    newLL.add(el, index);
+  }
+
+  // Reversing the LL
+  newLL.reverse();
+  arr.reverse();
+
+  // Checking if the enter data is valid
+  for (let [index, el] of arr.entries()) {
+    let storedData = newLL.get(index);
+
+    if (el !== storedData.data) {
+      return;
+    }
   }
 
   return true;
