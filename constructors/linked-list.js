@@ -1,5 +1,8 @@
 "use strict";
-const Node = require("./node");
+const add = require("../methods/add");
+const get = require("../methods/get");
+const reverse = require("../methods/reverse");
+const print = require("../methods/print");
 
 function LL() {
   this._head = null;
@@ -7,99 +10,12 @@ function LL() {
   this.length = 0;
 }
 
-LL.prototype.add = function add(data, index) {
-  if (typeof index === "number") {
-    if (index === 0) {
-      // Changing the head node
-      let node = new Node(data);
-      node.next = this._head;
-      this._head = node;
-      this.length++;
+LL.prototype.add = add;
 
-      return this;
-    }
+LL.prototype.get = get;
 
-    let i = index;
-    let currentNode = this._head;
-    while (currentNode) {
-      i--;
+LL.prototype.reverse = reverse;
 
-      if (i === 0) {
-        let node = new Node(data);
-        node.next = currentNode.next;
-        currentNode.next = node;
-        this.length++;
-
-        // Changing tail node
-        if (!node.next) {
-          this._tail = node;
-        }
-
-        return this;
-      }
-
-      currentNode = currentNode.next;
-    }
-
-    return this;
-  } else {
-    let node = new Node(data);
-
-    this._tail.next = node;
-    this._tail = node;
-    this.length++;
-
-    return this;
-  }
-};
-
-LL.prototype.get = function (index) {
-  if (typeof index === "number") {
-    let i = 0;
-    let currentNode = this._head;
-    while (i <= index && currentNode) {
-      if (i === index) {
-        return currentNode;
-      }
-
-      i++;
-      currentNode = currentNode.next;
-    }
-
-    return null;
-  } else {
-    return null;
-  }
-};
-
-LL.prototype.reverse = function (index) {
-  function reverse(node) {
-    if (!node) {
-      return null;
-    }
-
-    let tail = reverse(node.next);
-    if (tail) {
-      tail.next = node;
-      node.next = null;
-    }
-
-    return node;
-  }
-
-  let newTail = reverse(this._head);
-  this._head = this._tail;
-  this._tail = newTail;
-
-  return this;
-};
-
-LL.prototype.print = function () {
-  let currentNode = this._head;
-  while (currentNode) {
-    console.log(currentNode);
-    currentNode = currentNode.next;
-  }
-};
+LL.prototype.print = print;
 
 module.exports = LL;
