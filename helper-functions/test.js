@@ -6,7 +6,7 @@ let { beautifyLogs } = require("./beautifyLogs");
  */
 function test(testName, testingFunc) {
   let testResult = testingFunc();
-  beautifyLogs(testName, testResult);
+  beautifyLogs(testName, !!testResult);
 }
 
 module.exports = test;

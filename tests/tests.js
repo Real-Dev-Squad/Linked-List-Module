@@ -27,7 +27,7 @@ test("Test for adding data is a linked list sequentially", function addingDataIn
     let storedData = newLL.get(index);
 
     if (data !== storedData.data) {
-      return false;
+      return;
     }
   }
 
@@ -39,11 +39,11 @@ test("Test of randomly adding data in a linked list", function addingDataAnyWher
   let dummyLL = getDummyLinkedList(initialLLLength);
 
   if (dummyLL.add(40, 3).get(3).data !== 40) {
-    return false;
+    return;
   } else if (dummyLL.add(50, 0).get(0).data !== 50) {
-    return false;
+    return;
   } else if (dummyLL.add(100).get(dummyLL.length - 1).data !== 100) {
-    return false;
+    return;
   }
 
   return true;
